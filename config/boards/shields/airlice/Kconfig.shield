@@ -1,7 +1,0 @@
-# No whitespace after the comma or in your part name!
-config SHIELD_AIRLICE_LEFT
-    def_bool $(shields_list_contains,airlice_left)
-
-# No whitespace after the comma or in your part name!
-config SHIELD_AIRLICE_RIGHT
-    def_bool $(shields_list_contains,airlice_right)

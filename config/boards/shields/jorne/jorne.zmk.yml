@@ -1,6 +1,6 @@
 file_format: "1"
-id: airlice
-name: airlice
+id: jorne
+name: jorne
 type: shield
 url: https://github.com/foostan/crkbd/
 requires:
@@ -9,5 +9,5 @@ exposes:
 features:
   - keys
 siblings:
-  - airlice_left
-  - airlice_right
+  - jorne_left
+  - jorne_right
