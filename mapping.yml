@@ -1,0 +1,53 @@
+mappings:
+  cols:
+    col0:
+      nicenano: '031'
+      promicro: '21'
+    col1:
+      nicenano: '029'
+      promicro: '20'
+    col2:
+      nicenano: '002'
+      promicro: '19'
+    col3:
+      nicenano: '115'
+      promicro: '18'
+    col4:
+      nicenano: '113'
+      promicro: '15'
+    col5:
+      nicenano: '111'
+      promicro: '14'
+    col6:
+      nicenano: '010'
+      promicro: '16'
+  rows:
+    row0:
+      nicenano: '022'
+      promicro: '4'
+    row1:
+      nicenano: '024'
+      promicro: '5'
+    row2:
+      nicenano: '100'
+      promicro: '6'
+    row3:
+      nicenano: '011'
+      promicro: '7'
+  encoders:
+    encoder_left:
+      pin_a:
+        nicenano: '104'
+        promicro: '8'
+      pin_b:
+        nicenano: '106'
+        promicro: '9'
+    encoder_right:
+      pin_a:
+        nicenano: '104'
+        promicro: '8'
+      pin_b:
+        nicenano: '106'
+        promicro: '9'
+
+
