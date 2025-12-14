@@ -7,10 +7,11 @@
         zmk,kscan = &kscan0;
     };
 
-    wired_split {
-        compatible = "zmk,wired-split";
-        device = <&pro_micro_serial>;
-    };
+    // Wired split removed - using Bluetooth split instead
+    // wired_split {
+    //     compatible = "zmk,wired-split";
+    //     device = <&pro_micro_serial>;
+    // };
     
 
     kscan0: kscan0 {
@@ -19,10 +20,10 @@
         wakeup-source;
 
         row-gpios
-            = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
         
         col-gpios
