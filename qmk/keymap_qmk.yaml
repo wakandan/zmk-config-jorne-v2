@@ -1,0 +1,191 @@
+layout:
+  qmk_info_json: jorne_info.json
+layers:
+  Base:
+    - TAB
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - '['
+    - ESC
+    - RCTL
+    - A
+    - S
+    - D
+    - {t: F, h: NAV}
+    - G
+    - H
+    - {t: J, h: NUM}
+    - K
+    - L
+    - ;
+    - "'"
+    - ENT
+    - ESC
+    - LSFT
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - N
+    - M
+    - ','
+    - .
+    - /
+    - RSFT
+    - UP
+    - {h: SYM}
+    - LALT
+    - LGUI
+    - SPC
+    - BSPC
+    - {h: SYM}
+  NAV:
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - HOME
+    - PGUP
+    - PGDN
+    - END
+    - '-'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - Gui+[
+    - Sft+Gui+[
+    - Sft+Gui+]
+    - Gui+]
+    - '='
+    - _
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  NUM:
+    - {t: ▽, type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - '-'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - ^
+    - {type: held}
+    - '*'
+    - (
+    - )
+    - _
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  SYM:
+    - Gui+`
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ^
+    - '&'
+    - '*'
+    - (
+    - )
+    - _
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - '-'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '`'
+    - '`'
+    - '`'
+    - '~'
+    - '|'
+    - ']'
+    - '['
+    - '{'
+    - '}'
+    - \
+    - '`'
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Alt+BSPC
+    - {type: held}
