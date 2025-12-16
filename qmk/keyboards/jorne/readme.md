@@ -26,39 +26,180 @@ A split ergonomic keyboard with 46 keys (6×3 + 3 thumb keys per side, plus an e
 | Encoder A | B5 | B5 |
 | Encoder B | B6 | B6 |
 
-## Building
+## QMK Installation
 
-### Prerequisites
+### macOS (Homebrew)
 
-1. Install QMK: `brew install qmk/qmk/qmk` (or see https://docs.qmk.fm/newbs_getting_started)
-2. Run `qmk setup` to clone the QMK firmware repository
-3. Ensure toolchains are in PATH:
-   ```bash
-   export PATH="/opt/homebrew/opt/avr-gcc@8/bin:/opt/homebrew/opt/arm-none-eabi-gcc@8/bin:/opt/homebrew/opt/arm-none-eabi-binutils/bin:/opt/homebrew/opt/avr-binutils/bin:$PATH"
-   ```
-
-### Build Steps
+**Option 1: Using Homebrew (Recommended)**
 
 ```bash
-# 1. Copy this keyboard folder to qmk_firmware/keyboards/
-cp -r qmk/keyboards/jorne ~/qmk_firmware/keyboards/jorne_custom
+# Install QMK CLI
+brew install qmk/qmk/qmk
 
-# 2. Build firmware
-qmk compile -kb jorne_custom -km default
-
-# 3. Flash left half (enter bootloader first - short RST to GND twice)
-qmk flash -kb jorne_custom -km default -bl avrdude-split-left
-
-# 4. Flash right half
-qmk flash -kb jorne_custom -km default -bl avrdude-split-right
+# Setup QMK (clones qmk_firmware repository to ~/qmk_firmware)
+qmk setup
 ```
 
-## Flashing
+**Option 2: Using pipx (Alternative)**
 
-1. Connect the **left** half via USB
-2. Short RST and GND twice quickly to enter bootloader (LED will pulse)
-3. Run flash command within 8 seconds
-4. Repeat for **right** half
+```bash
+# Install pipx if not already installed
+brew install pipx
+pipx ensurepath
+
+# Install QMK via pipx
+pipx install qmk
+
+# Setup QMK
+qmk setup
+```
+
+### Install Required Toolchains
+
+The AVR toolchain is required for Pro Micro (ATmega32U4):
+
+```bash
+# Install AVR toolchain
+brew tap osx-cross/avr
+brew install avr-gcc@8 avr-binutils
+
+# Add to PATH (add this to your ~/.zshrc or ~/.bashrc)
+export PATH="/opt/homebrew/opt/avr-gcc@8/bin:/opt/homebrew/opt/avr-binutils/bin:$PATH"
+
+# Reload shell or run
+source ~/.zshrc
+```
+
+### Verify Installation
+
+```bash
+# Check QMK installation
+qmk doctor
+
+# Should show: QMK is ready to go
+```
+
+### Windows
+
+```bash
+# Use QMK MSYS
+# Download from: https://msys.qmk.fm/
+
+# After installing, open QMK MSYS and run:
+qmk setup
+```
+
+### Linux (Debian/Ubuntu)
+
+```bash
+# Install dependencies
+sudo apt install -y git python3-pip
+
+# Install QMK
+python3 -m pip install --user qmk
+
+# Setup QMK
+qmk setup
+
+# Install AVR toolchain
+sudo apt install -y avr-libc gcc-avr avrdude
+```
+
+## Building the Firmware
+
+### Step 1: Copy Keyboard to QMK
+
+```bash
+# Copy this keyboard folder to qmk_firmware/keyboards/
+cp -r qmk/keyboards/jorne ~/qmk_firmware/keyboards/jorne
+
+# Or create a symlink (useful for development)
+ln -s "$(pwd)/qmk/keyboards/jorne" ~/qmk_firmware/keyboards/jorne
+```
+
+### Step 2: Compile
+
+```bash
+# Navigate to QMK firmware directory
+cd ~/qmk_firmware
+
+# Compile the firmware
+qmk compile -kb jorne -km default
+```
+
+If successful, you'll see output like:
+```
+Compiling keymap with make...
+[OK] Compiled firmware: jorne_default.hex
+```
+
+The compiled firmware will be at `~/qmk_firmware/jorne_default.hex`
+
+## Flashing the Firmware
+
+### Using QMK Toolbox (GUI - Recommended for Beginners)
+
+1. Download [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)
+2. Open QMK Toolbox
+3. Load the `.hex` file
+4. Connect keyboard half via USB
+5. Enter bootloader mode (see below)
+6. Click "Flash"
+7. Repeat for other half
+
+### Using Command Line
+
+**Flash Left Half:**
+```bash
+# Put left half in bootloader mode first, then run:
+qmk flash -kb jorne -km default -bl avrdude-split-left
+```
+
+**Flash Right Half:**
+```bash
+# Put right half in bootloader mode first, then run:
+qmk flash -kb jorne -km default -bl avrdude-split-right
+```
+
+**Alternative (auto-detect):**
+```bash
+# This will auto-detect the bootloader
+qmk flash -kb jorne -km default
+```
+
+### Entering Bootloader Mode (Pro Micro)
+
+**Method 1: Reset Button (if available)**
+- Press the reset button twice quickly
+
+**Method 2: Short RST to GND**
+- Use tweezers or a wire to short the RST and GND pins twice quickly
+- The LED will pulse/fade indicating bootloader mode
+
+**Method 3: Bootmagic Reset**
+- Hold the top-left key while plugging in USB
+
+> ⚠️ **Important**: You have ~8 seconds to flash after entering bootloader mode!
+
+### Flashing Both Halves
+
+For split keyboards, you need to flash **both halves**:
+
+1. **Flash Left Half First**
+   - Connect left half via USB
+   - Enter bootloader mode
+   - Flash with `-bl avrdude-split-left`
+
+2. **Flash Right Half**
+   - Disconnect left half
+   - Connect right half via USB
+   - Enter bootloader mode
+   - Flash with `-bl avrdude-split-right`
+
+3. **Test**
+   - Connect both halves with TRRS cable
+   - Connect left half to computer via USB
+   - Both halves should work
 
 ## Layers
 
