@@ -23,5 +23,23 @@
                                   &kp LEFT_ALT  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp BACKSPACE  &mo 2
             >;
         };
+
+        layer_1 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans  &trans  &kp N6                &kp N7                    &kp N8                     &kp N9                 &kp N0  &kp MINUS
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT              &kp DOWN                  &kp UP                     &kp RIGHT              &trans  &trans     &trans
+                                &trans  &trans  &trans  &trans                &trans                    &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+        &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
