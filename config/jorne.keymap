@@ -18,12 +18,12 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 4 1>; };  // 8x multiplier - small rotation = big scroll
+&msc_input_listener { input-processors = <&zip_scroll_scaler 4 1>; };  // 4x multiplier
 
 &msc {
-    acceleration-exponent = <0>;      // 0 = uniform speed (more responsive for small movements)
-    time-to-max-speed-ms = <40>;      // faster acceleration
-    delay-ms = <0>;
+    acceleration-exponent = <0>;      // 0 = uniform speed (constant, no acceleration)
+    time-to-max-speed-ms = <0>;       // 0 = instant full speed, no ramp-up
+    delay-ms = <0>;                   // no delay
 };
 
 &mmv {
