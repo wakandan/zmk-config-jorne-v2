@@ -22,6 +22,8 @@
 &kp ESC  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V         &kp B         &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT  &kp UP
                                   &mo 3  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp BACKSPACE  &mo 3
             >;
+
+            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
         };
 
         layer_1 {
