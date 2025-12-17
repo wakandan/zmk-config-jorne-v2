@@ -16,10 +16,11 @@
 
 / {
     behaviors {
-        rot_scroll: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
+        MouseScroll: MouseScroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "MouseScroll";
             #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = <20>;
         };
     };
@@ -35,7 +36,7 @@
                                   &mo 3  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp BACKSPACE  &mo 3
             >;
 
-            sensor-bindings = <&rot_scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&MouseScroll SCRL_UP SCRL_DOWN>;
         };
 
         layer_1 {
