@@ -14,11 +14,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 1500  // Higher = bigger scroll per event
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 1000 // Higher = bigger scroll per event
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 8 1>; };  // 8x multiplier - small rotation = big scroll
+&msc_input_listener { input-processors = <&zip_scroll_scaler 4 1>; };  // 8x multiplier - small rotation = big scroll
 
 &msc {
     acceleration-exponent = <0>;      // 0 = uniform speed (more responsive for small movements)
