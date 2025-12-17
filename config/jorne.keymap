@@ -18,11 +18,11 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 4 1>; };  // 4x multiplier for more responsive scroll
 
 &msc {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <100>;
+    acceleration-exponent = <0>;      // 0 = uniform speed (more responsive for small movements)
+    time-to-max-speed-ms = <40>;      // faster acceleration
     delay-ms = <0>;
 };
 
