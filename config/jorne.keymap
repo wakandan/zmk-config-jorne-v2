@@ -7,19 +7,17 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/zmk/mouse.h>
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 #include <dt-bindings/zmk/pointing.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
-
 / {
     behaviors {
         MouseScroll: MouseScroll {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "MouseScroll";
-            #sensor-binding-cells = <2>;
+            #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = <20>;
         };
@@ -36,7 +34,7 @@
                                   &mo 3  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp BACKSPACE  &mo 3
             >;
 
-            sensor-bindings = <&MouseScroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&MouseScroll>;
         };
 
         layer_1 {
