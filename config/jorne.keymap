@@ -57,10 +57,10 @@
 
         layer_1 {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME              &kp PAGE_UP               &kp PAGE_DOWN              &kp END                &kp MINUS  &kp PLUS
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &kp EQUAL  &kp UNDERSCORE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT              &kp DOWN                  &kp UP                     &kp RIGHT              &kp PIPE   &kp BACKSLASH   &trans
-                                &trans  &trans  &trans  &trans                &trans                    &trans
+        &trans  &trans                    &trans  &trans  &trans  &trans  &kp HOME              &kp PAGE_UP               &kp PAGE_DOWN              &kp END                &kp MINUS  &kp PLUS
+&trans  &trans  &trans                    &trans  &trans  &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &kp EQUAL  &kp UNDERSCORE  &trans
+&trans  &trans  &kp LC(LS(LG(NUMBER_4)))  &trans  &trans  &trans  &trans  &kp LEFT              &kp DOWN                  &kp UP                     &kp RIGHT              &kp PIPE   &kp BACKSLASH   &trans
+                                                  &trans  &trans  &trans  &trans                &trans                    &trans
             >;
         };
 
