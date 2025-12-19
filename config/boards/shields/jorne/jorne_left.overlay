@@ -1,15 +1,5 @@
 #include "jorne.dtsi" // The shared dtsi file is included in the overlay
 
-/ {
-    encoder_left: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&gpio1 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        steps = <24>;
-        status = "disabled";
-    };
-};
-
 // Label of the kscan node in the dtsi
 // col 0 is on the right most side of the board
 // col 0 -> pin 21
