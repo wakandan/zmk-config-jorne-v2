@@ -21,3 +21,7 @@
         , <&pro_micro 8 GPIO_ACTIVE_HIGH>
         ;
 };
+
+&encoder_right {
+    status = "okay";
+};
