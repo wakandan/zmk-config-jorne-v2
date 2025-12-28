@@ -59,9 +59,9 @@
 
         layer_1 {
             bindings = <
-        &trans  &kp C_VOLUME_UP           &kp C_VOLUME_DOWN  &kp K_PLAY_PAUSE  &trans  &trans  &kp HOME              &kp PAGE_UP               &kp PAGE_DOWN              &kp END                &kp PLUS   &kp UNDER
-&trans  &trans  &trans                    &trans             &trans            &trans  &trans  &kp LEFT              &kp DOWN                  &kp UP                     &kp RIGHT              &kp EQUAL  &kp MINUS      &trans
-&trans  &trans  &kp LC(LS(LG(NUMBER_4)))  &trans             &trans            &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &kp PIPE   &kp BACKSLASH  &trans
+        &trans  &kp C_VOLUME_UP           &kp C_VOLUME_DOWN  &kp K_PLAY_PAUSE  &trans  &trans  &kp HOME              &kp PAGE_UP               &kp PAGE_DOWN              &kp END                &kp PLUS       &kp UNDER
+&trans  &trans  &trans                    &trans             &trans            &trans  &trans  &kp LEFT              &kp DOWN                  &kp UP                     &kp RIGHT              &kp EQUAL      &kp MINUS  &trans
+&trans  &trans  &kp LC(LS(LG(NUMBER_4)))  &trans             &trans            &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &kp BACKSLASH  &kp PIPE   &trans
                                                              &trans            &trans  &trans  &trans                &kp DELETE                &trans
             >;
         };
