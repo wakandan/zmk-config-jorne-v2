@@ -60,7 +60,7 @@
         layer_1 {
             bindings = <
         &trans  &kp C_VOLUME_UP           &kp C_VOLUME_DOWN  &kp K_PLAY_PAUSE  &trans  &trans  &kp HOME              &kp PAGE_UP               &kp PAGE_DOWN              &kp END                &kp PLUS       &kp UNDER
-&trans  &trans  &trans                    &trans             &trans            &trans  &trans  &kp LEFT              &kp DOWN                  &kp UP                     &kp RIGHT              &kp EQUAL      &kp MINUS  &trans
+&trans  &trans  &trans                    &trans             &trans            &trans  &trans  &kp LEFT              &kp DOWN                  &kp UP                     &kp RIGHT              &kp EQUAL      &kp MINUS  &kp LS(ENTER)
 &trans  &trans  &kp LC(LS(LG(NUMBER_4)))  &trans             &trans            &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &kp LG(RIGHT_BRACKET)  &kp BACKSLASH  &kp PIPE   &trans
                                                              &trans            &trans  &trans  &trans                &kp DELETE                &trans
             >;
@@ -68,10 +68,10 @@
 
         layer_2 {
             bindings = <
-        &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans    &trans     &trans  &trans
-&trans  &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &kp LEFT  &kp RIGHT  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE        &trans  &trans  &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &kp C_PREVIOUS     &kp C_NEXT       &kp C_PLAY_PAUSE  &trans  &trans  &kp LEFT  &kp RIGHT  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans           &trans            &trans  &trans  &trans    &trans     &trans  &trans  &trans
+                                &trans             &trans           &trans            &trans  &trans  &trans
             >;
         };
 
